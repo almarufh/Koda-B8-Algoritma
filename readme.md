@@ -13,8 +13,8 @@ Algoritma ini bertujuan untuk menghitung Luas Persegi Panjang dan keliling perse
 5. Input Harga Pagar/M (P) 
 6. Luas Area (LAR) sama dengan PA dikali LA
 7. Keliling Area (KAR) sama dengan 2 kali PA ditambah 2 Kali La
-8. Outputkan Biaya Pemasangan Karpet (BPK) dari hasil LAR dikali K
-9. Outputkan Biaya Pemasangan Pagar (BPP) hasil dari KAR dikali P
+8. Outputkan Biaya Pemasangan Karpet (BPK) adalah dari hasil LAR dikali K
+9. Outputkan Biaya Pemasangan Pagar (BPP) adalah hasil dari KAR dikali P
 10. Stop
 
 ## FlowChart
@@ -30,8 +30,8 @@ F@{ shape: rect, label: "LAR = PA * LA" }
 G@{ shape: rect, label: "KAR = ((2 * PA) + (2 * LA))" }
 H@{ shape: rect, label: "BPK = LAR * K" }
 I@{ shape: rect, label: "BPP = KAR * P" }
-J@{ shape: lean-r, label: "'{BPK}'"}
-K@{ shape: lean-r, label: "'{BPP}'"}
+J@{ shape: lean-r, label: "'Biaya Pemasangan Karpet adalah {BPK}'"}
+K@{ shape: lean-r, label: "'Biaya Pemasangan Pagar adalah {BPP}'"}
 L@{ shape: dbl-circ, label: Stop}
 
 A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K --> L
@@ -60,6 +60,6 @@ KAR <- ((2*PA)+(2*LA))
 BPK <- LAR * P
 BPP <- KAR * P
 
-OUTPUT BPK
-OUTPUT BPP
+OUTPUT "Biaya Pemasangan Karpet adalah", BPK
+OUTPUT "Biaya Pemasangan Pagar adalah", BPP
 ```
