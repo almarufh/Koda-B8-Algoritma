@@ -6,7 +6,7 @@ Algoritma yang ditulis untuk menyelesaikan masalah menghitung luas lingkaran dan
 ## Deskriptif
 
 1. Mulai
-2. Masukan panjang jari-jari (r)
+2. Input nilai jari-jari (r)
 3. Phi bernilai 3,14 atau 22/7
 3. kalikan r kuadrat dengan phi   
 4. Outputkan sebagai Luas
@@ -23,7 +23,7 @@ flowchart TD
 A@{ shape: circle, label: "Start" }
 B@{ shape: lean-r, label: "r" }
 C@{ shape: diamond, label: "r % 7 == 0" }
-E@{ shape: rect, label: "Keliling = 2 X Phi X r X r"}
+E@{ shape: rect, label: "Keliling = 2 X Phi X r"}
 F@{ shape: rect, label: "Luas = Phi X r X r"}
 H@{ shape: rect, label: "Phi = 3,14"}
 I@{ shape: lean-r, label: "'{Luas}'" }
@@ -42,9 +42,26 @@ F --> J
 J --> I
 I --> K
 
+```
 
+## Pseudo-Code
+```pseudo
+DECLARE r: INTEGER
+DECLARE Phi: DOUBLE
+DECLARE Keliling: INTEGER
+DECLARE Luas: INTEGER
 
+INPUT r
 
+IF r % 7 == 0 THAN
+    OUTPUT Phi: 22/7
+ELSE
+    OUTPUT Phi: 3,14
+ENDIF
 
+Keliling <- 2*Phi*r
+Luas <- Phi*r*r
 
+OUTPUT Keliling
+OUTPUT Luas
 ```
