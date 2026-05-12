@@ -4,7 +4,7 @@
 
 ## Deskriptif
 
-Algoritma ini bertujuan untuk menghitung Luas Persegi Panjang dan keliling persegi panjang untuk
+Algoritma ini bertujuan untuk menghitung Luas Persegi Panjang dan keliling persegi panjang untuk menetukan biaya Pemasangan Karpet dan Pagar
 
 1. Start
 2. Input Panjang Area (PA)
