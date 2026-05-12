@@ -1,8 +1,8 @@
 # ALGORITMA
 
-## MENGHITUNG HARGA DAN KEMBALIAN BERDASARKAN KUPON
+## MENGHITUNG KEMBALIAN BERDASARKAN KUPON
 
-Algoritma ini untuk menyelesaikan masalah Menghitung harga berdasarkan kupon
+Algoritma ini untuk menyelesaikan masalah Menghitung kembalian berdasarkan kupon
 
 ## DESKRIPTIF
 
