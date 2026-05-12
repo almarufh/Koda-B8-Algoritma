@@ -62,6 +62,5 @@ ENDIF
 Keliling <- 2*Phi*r
 Luas <- Phi*r*r
 
-OUTPUT Keliling
-OUTPUT Luas
+OUTPUT Keliling, Luas
 ```
