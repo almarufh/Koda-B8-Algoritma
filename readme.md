@@ -1,65 +1,80 @@
-# Algoritma
+# ALGORITMA
 
-## Menghitung luas Persegi Panjang
+## MENGHITUNG HARGA DAN KEMBALIAN BERDASARKAN KUPON
 
-## Deskriptif
+Algoritma ini untuk menyelesaikan masalah Menghitung harga berdasarkan kupon
 
-Algoritma ini bertujuan untuk menghitung Luas Persegi Panjang dan keliling persegi panjang untuk menetukan biaya Pemasangan Karpet dan Pagar
+## DESKRIPTIF
 
 1. Start
-2. Input Panjang Area (PA)
-3. Input Lebar Area (LA)
-4. Input Harga Karpet/M2 (K) 
-5. Input Harga Pagar/M (P) 
-6. Luas Area (LAR) sama dengan PA dikali LA
-7. Keliling Area (KAR) sama dengan 2 kali PA ditambah 2 Kali La
-8. Outputkan Biaya Pemasangan Karpet (BPK) adalah dari hasil LAR dikali K
-9. Outputkan Biaya Pemasangan Pagar (BPP) adalah hasil dari KAR dikali P
-10. Stop
+2. Input uang_tanai, harga, kupon
+3. Cek kupon, jika sama dengan BELIUM outputkan kembalian dari perhitungan uang_tunai dikurang harga
+4. Jika tidak sama, cek uang_tunai, jika sama dengan atau lebih besar dari 200.000 maka outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 7% dari harga
+5. Jika tidak sama, outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 3% dari harga
+6. Cek kembalian, jika value kurang dari 0, outputkan UANG TIDAK CUKUP
+7. Jika tidak, outputkan kembalian
+8. Stop 
 
 ## FlowChart
 ```mermaid
+
 flowchart TD
 
-A@{ shape: circle, label: Start}
-B@{ shape: lean-r, label: PA }
-C@{ shape: lean-r, label: LA }
-D@{ shape: lean-r, label: K }
-E@{ shape: lean-r, label: P }
-F@{ shape: rect, label: "LAR = PA * LA" }
-G@{ shape: rect, label: "KAR = ((2 * PA) + (2 * LA))" }
-H@{ shape: rect, label: "BPK = LAR * K" }
-I@{ shape: rect, label: "BPP = KAR * P" }
-J@{ shape: lean-r, label: "'Biaya Pemasangan Karpet adalah {BPK}'"}
-K@{ shape: lean-r, label: "'Biaya Pemasangan Pagar adalah {BPP}'"}
-L@{ shape: dbl-circ, label: Stop}
+A@{ shape: circle, label: Start }
+B@{ shape: lean-r, label: uang_tanai }
+C@{ shape: lean-r, label: harga }
+D@{ shape: lean-r, label: kupon }
+E@{ shape: diamond, label: "kupon == BELIUM"}
+F@{ shape: rect, label: "kembalian = uang_tunai - harga" }
+G@{ shape: diamond, label: "uang_tunai >= 20000" }
+H@{ shape: diamond, label: "kembalian < 0" }
+I@{ shape: rect, label: "kembalian = uang_tunai - ((harga*0.07) + harga)" }
+J@{ shape: rect, label: "kembalian = uang_tunai - ((harga*0.03) + harga)" }
+K@{ shape: dbl-circ, label: Stop }
+L@{ shape: lean-r, label: '"UANG TIDAK CUKUP"' }
+M@{ shape: lean-r, label: '"{kembalian}"'}
 
-A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K --> L
+A --> B --> C --> D --> E
+E --true--> F --> H
+E --false--> G
+G --true--> I --> H
+G --false--> J --> H
+H  --false--> L --> K 
+H --> M --> K 
 
 ```
-
 ## Pseude-Code
+
+@{ shape: lean-r, label: '"{kembalian}"' }
+
 ```pseude
+
 TYPE i = ^INTEGER
-DECLARE PA: i
-DECLARE LA: i
-DECLARE K: i
-DECLARE P: i
-DECLARE LAR: i
-DECLARE KAR: i
-DECLARE BPK: i
-DECLARE BPP: i
 
-INPUT PA
-INPUT LA
-INPUT K
-INPUT P
+DECLARE uang_tunai : i
+DECLARE harga : i
+DECLARE kembalian : i
+DECLARE kupon: STRING
 
-LAR <- PA * LA
-KAR <- ((2*PA)+(2*LA))
-BPK <- LAR * P
-BPP <- KAR * P
+INPUT UPPERCASE(kupon)
+INPUT uang_tunai
+INPUT harga
+INPUT kupon
 
-OUTPUT "Biaya Pemasangan Karpet adalah", BPK
-OUTPUT "Biaya Pemasangan Pagar adalah", BPP
+IF kupon == BELIUM THAN
+    kembalian <- uang_tunai - harga
+ELSE
+    IF uang_tunai >= 20000 THAN
+        kembalian <- uang_tunai - ((harga*0.07) + harga)
+    ELSE 
+        kembalian <- uang_tunai - ((harga*0.03) + harga)
+    ENDIF
+ENDIF
+
+IF kembalian < 0 THAN
+    OUTPUT "UANG TIDAK CUKUP"
+ELSE
+    OUTPUT kembalian
+ENDIF
+
 ```
