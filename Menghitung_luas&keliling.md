@@ -54,9 +54,9 @@ DECLARE Luas: INTEGER
 INPUT r
 
 IF r % 7 == 0 THAN
-    OUTPUT Phi: 22/7
+    OUTPUT Phi <- 22/7
 ELSE
-    OUTPUT Phi: 3,14
+    OUTPUT Phi <- 3,14
 ENDIF
 
 Keliling <- 2*Phi*r
