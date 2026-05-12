@@ -7,10 +7,10 @@
 Algoritma ini bertujuan untuk menghitung Luas Persegi Panjang dan keliling persegi panjang untuk
 
 1. Start
-2. Harga Karpet/M2 (K) adalah 20.000
-3. Harga Pagar/M (P) adalah 10.000
-4. Input Panjang Area (PA)
-5. Input Lebar Area (LA)
+2. Input Panjang Area (PA)
+3. Input Lebar Area (LA)
+4. Input Harga Karpet/M2 (K) 
+5. Input Harga Pagar/M (P) 
 6. Luas Area (LAR) sama dengan PA dikali LA
 7. Keliling Area (KAR) sama dengan 2 kali PA ditambah 2 Kali La
 8. Outputkan Biaya Pemasangan Karpet (BPK) dari hasil LAR dikali K
@@ -22,8 +22,44 @@ Algoritma ini bertujuan untuk menghitung Luas Persegi Panjang dan keliling perse
 flowchart TD
 
 A@{ shape: circle, label: Start}
+B@{ shape: lean-r, label: PA }
+C@{ shape: lean-r, label: LA }
+D@{ shape: lean-r, label: K }
+E@{ shape: lean-r, label: P }
+F@{ shape: rect, label: "LAR = PA * LA" }
+G@{ shape: rect, label: "KAR = ((2 * PA) + (2 * LA))" }
+H@{ shape: rect, label: "BPK = LAR * K" }
+I@{ shape: rect, label: "BPP = KAR * P" }
+J@{ shape: lean-r, label: "'{BPK}'"}
+K@{ shape: lean-r, label: "'{BPP}'"}
+L@{ shape: dbl-circ, label: Stop}
 
+A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K --> L
 
 ```
 
 ## Pseude-Code
+```pseude
+TYPE i = ^INTEGER
+DECLARE PA: i
+DECLARE LA: i
+DECLARE K: i
+DECLARE P: i
+DECLARE LAR: i
+DECLARE KAR: i
+DECLARE BPK: i
+DECLARE BPP: i
+
+INPUT PA
+INPUT LA
+INPUT K
+INPUT P
+
+LAR <- PA * LA
+KAR <- ((2*PA)+(2*LA))
+BPK <- LAR * P
+BPP <- KAR * P
+
+OUTPUT BPK
+OUTPUT BPP
+```
