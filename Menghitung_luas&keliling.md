@@ -7,7 +7,7 @@ Algoritma yang ditulis untuk menyelesaikan masalah menghitung luas lingkaran dan
 
 1. Mulai
 2. Input nilai jari-jari (r)
-3. Phi bernilai 3,14 atau 22/7
+3. Phi bernilai 22/7 jika r moduls 7 sama dengan 0, jika tidak 3,14
 3. kalikan r kuadrat dengan phi   
 4. Outputkan sebagai Luas
 5. lanjut
@@ -29,7 +29,7 @@ H@{ shape: rect, label: "Phi = 3,14"}
 I@{ shape: lean-r, label: "'{Luas}'" }
 J@{ shape: lean-r, label: "'{Keliling}'" }
 K@{ shape: dbl-circ, label: "Stop"}
-L@{ shape: lean-r, label: "Phi = 22/7" }
+L@{ shape: rect, label: "Phi = 22/7" }
 
 A --> B
 B --> C
@@ -54,13 +54,14 @@ DECLARE Luas: INTEGER
 INPUT r
 
 IF r % 7 == 0 THAN
-    OUTPUT Phi <- 22/7
+    Phi <- 22/7
 ELSE
-    OUTPUT Phi <- 3,14
+    Phi <- 3,
 ENDIF
 
 Keliling <- 2*Phi*r
 Luas <- Phi*r*r
 
-OUTPUT Keliling, Luas
+OUTPUT Keliling
+OUTPUT Luas
 ```
