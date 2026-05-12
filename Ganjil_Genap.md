@@ -21,11 +21,11 @@ flowchart TD
 
 A@{ shape: circle, label: "Start" }
 B@{ shape: lean-r, label: "Angka" }
-C@{ shape: rect, label: "Angka % 2" }
+C@{ shape: rect, label: '"{Angka}" % 2' }
 D@{ shape: diamond, label: "0 = true" }
 E@{ shape: diamond, label: "0 = false" }
-F@{ shape: lean-r, label: "GANJIL" }
-G@{ shape: lean-r, label: "GENAP" }
+F@{ shape: lean-r, label: '"GANJIL"' }
+G@{ shape: lean-r, label: '"GENAP"' }
 H@{ shape: dbl-circ, label: "Stop" }
 
 A --IN--> B
@@ -37,6 +37,23 @@ E --OUT--> F
 G --> H
 F --> H
 
+```
 
+## Pseudo_code
+
+```pseudo
+DECLARE Angka: INTEGER
+DECLARE Bulat: INTEGER
+CONSTANT Modulus: 2
+
+INPUT Angka
+
+Bulat <- Angka % Modulus
+
+IF Bulat == 0 THAN
+    OUTPUT "Bilangan Bulat"
+ELSE
+    OUTPUT "Bilanhgan Ganjil"
+ENDIF
 
 ```
