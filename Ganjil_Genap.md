@@ -7,10 +7,10 @@
 Algoritma yang ditulis untuk menentukan suatu bilangan merupakan ganjil atau genap
 
 1. Mulai
-2. Ambil nilai bilangan
-3. bagi nilai bilangan tersebut dengan 2
-4. jika hasilnya angka bulat maka difinisikan bilangan tersebut adalah genap
-5. jika hasilnya merupakan angka desimal maka tentukan bilangan tersebut adalah ganjil
+2. Input Angka
+3. Bagi Angka dengan 2
+4. Jika Hasilnya sama dengan 0 outputkan GENAP
+5. Jika hasilnya tidak sama dengan 0 outpukan GANJIL
 6. selesai
 
 
@@ -21,19 +21,15 @@ flowchart TD
 
 A@{ shape: circle, label: "Start" }
 B@{ shape: lean-r, label: "Angka" }
-C@{ shape: rect, label: "{Angka} % 2 == 0" }
-D@{ shape: diamond, label: "0 = true" }
-E@{ shape: diamond, label: "0 = false" }
+C@{ shape: diamond, label: "Angka % 2 == 0" }
 F@{ shape: lean-r, label: '"GANJIL"' }
 G@{ shape: lean-r, label: '"GENAP"' }
 H@{ shape: dbl-circ, label: "Stop" }
 
-A --IN--> B
+A --> B
 B --> C
-C --> D
-C --> E
-D --OUT--> G
-E --OUT--> F
+C --> G
+C --> F
 G --> H
 F --> H
 
