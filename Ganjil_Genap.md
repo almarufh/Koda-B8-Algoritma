@@ -8,9 +8,9 @@ Algoritma yang ditulis untuk menentukan suatu bilangan merupakan ganjil atau gen
 
 1. Mulai
 2. Input Angka
-3. Modulus Angka dengan 2 untuk mendapatkan Hasil
-4. Jika Hasil sama dengan 0 outputkan GENAP
-5. Jika Hasil tidak sama dengan 0 outpukan GANJIL
+3. Modulus Angka dengan 2 
+4. Jika hasilnya sama dengan 0 outputkan GENAP
+5. Jika hasilnya tidak sama dengan 0 outpukan GANJIL
 6. selesai
 
 
@@ -39,13 +39,10 @@ F --> H
 
 ```pseudo
 DECLARE Angka: INTEGER
-DECLARE Hasil: INTEGER
 
 INPUT Angka
 
-Hasil <- Angka % 2
-
-IF Hasil == 0 THAN
+IF Angka % 2 == 0 THAN
     OUTPUT "BULAT"
 ELSE
     OUTPUT "GANJIL"
