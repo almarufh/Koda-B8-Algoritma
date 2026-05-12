@@ -10,7 +10,7 @@ Algoritma yang ditulis untuk menentukan suatu bilangan merupakan ganjil atau gen
 2. Input Angka
 3. Modulus Angka dengan 2 untuk mendapatkan Hasil
 4. Jika Hasil sama dengan 0 outputkan GENAP
-5. Jika hasilnya tidak sama dengan 0 outpukan GANJIL
+5. Jika hasil tidak sama dengan 0 outpukan GANJIL
 6. selesai
 
 
