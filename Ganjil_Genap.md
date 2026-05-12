@@ -8,10 +8,9 @@ Algoritma yang ditulis untuk menentukan suatu bilangan merupakan ganjil atau gen
 
 1. Mulai
 2. Input Angka
-3. Modulus Angka dengan 2 
-4. Jika hasilnya sama dengan 0 outputkan GENAP
-5. Jika hasilnya tidak sama dengan 0 outpukan GANJIL
-6. selesai
+3. Jika Modulus Angka dengan 2 hasilnya sama dengan 0 outputkan GENAP
+4. Jika  tidak sama outpukan GANJIL
+5. selesai
 
 
 ## Flowchart
