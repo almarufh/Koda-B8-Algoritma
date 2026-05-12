@@ -1,6 +1,8 @@
 # Algoritms
 ## Memindahkan Air
 
+Algoritma yang ditulis untuk menyelesaikan masalah memindahkan air didalam gelas
+
 1. Mulai
 2. Siapkan Gelas kosong selain gelas Kopi dan gelas teh
 3. Tuangkan salah satu diantara Gelas Kopi atau Teh kedalam gelas kosong tersebut
