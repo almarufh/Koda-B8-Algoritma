@@ -21,7 +21,7 @@ flowchart TD
 
 A@{ shape: circle, label: "Start" }
 B@{ shape: lean-r, label: "Angka" }
-C@{ shape: rect, label: '"{Angka}" % 2' }
+C@{ shape: rect, label: "{Angka} % 2 == 0" }
 D@{ shape: diamond, label: "0 = true" }
 E@{ shape: diamond, label: "0 = false" }
 F@{ shape: lean-r, label: '"GANJIL"' }
@@ -51,9 +51,9 @@ INPUT Angka
 Bulat <- Angka % Modulus
 
 IF Bulat == 0 THAN
-    OUTPUT "Bilangan Bulat"
+    OUTPUT "BULAT"
 ELSE
-    OUTPUT "Bilanhgan Ganjil"
+    OUTPUT "GANJIL"
 ENDIF
 
 ```
