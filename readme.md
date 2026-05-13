@@ -7,9 +7,11 @@ Algoritma ini untuk menyelesaikan masalah Menghitung kembalian berdasarkan kupon
 ## DESKRIPTIF
 
 1. Start
-2. Input uang_tanai, harga, kupon
-3. Cek kupon, jika sama dengan BELIUM outputkan kembalian dari perhitungan uang_tunai dikurang harga
-4. Jika tidak sama, cek uang_tunai, jika sama dengan atau lebih besar dari 200.000 maka outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 7% dari harga
+2. Input uang_tanai 
+3. Input harga 
+4. Input kupon jika memiliki kupon
+3. Cek kupon, jika sesuai yang di izinkan yaitu BELIUM outputkan kembalian dari perhitungan uang_tunai dikurang harga
+4. Jika tidak sesuai, cek uang_tunai, jika sama dengan atau lebih besar dari 200.000 maka outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 7% dari harga
 5. Jika tidak sama, outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 3% dari harga
 6. Cek kembalian, jika value kurang dari 0, outputkan UANG TIDAK CUKUP
 7. Jika tidak, outputkan kembalian
@@ -21,10 +23,10 @@ Algoritma ini untuk menyelesaikan masalah Menghitung kembalian berdasarkan kupon
 flowchart TD
 
 A@{ shape: circle, label: Start }
-B@{ shape: lean-r, label: uang_tanai }
+B@{ shape: lean-r, label: uang_tunai }
 C@{ shape: lean-r, label: harga }
 D@{ shape: lean-r, label: kupon }
-E@{ shape: diamond, label: "kupon == BELIUM"}
+E@{ shape: diamond, label: 'kupon == "BELIUM"'}
 F@{ shape: rect, label: "kembalian = uang_tunai - harga" }
 G@{ shape: diamond, label: "uang_tunai >= 20000" }
 H@{ shape: diamond, label: "kembalian < 0" }
@@ -61,7 +63,7 @@ INPUT uang_tunai
 INPUT harga
 INPUT kupon
 
-IF kupon == BELIUM THAN
+IF kupon == "BELIUM" THAN
     kembalian <- uang_tunai - harga
 ELSE
     IF uang_tunai >= 20000 THAN
