@@ -9,7 +9,7 @@ Algoritma ini untuk menyelesaikan masalah Menghitung kembalian berdasarkan kupon
 1. Start
 2. Input uang_tanai 
 3. Input harga 
-4. Input kupon jika memiliki kupon
+4. Input kupon
 3. Cek kupon, jika sesuai yang di izinkan yaitu BELIUM outputkan kembalian dari perhitungan uang_tunai dikurang harga
 4. Jika tidak sesuai, cek uang_tunai, jika sama dengan atau lebih besar dari 200.000 maka outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 7% dari harga
 5. Jika tidak sama, outputkan kembalian dari perhitungan uang_tunai dikurang harga ditambah 3% dari harga
