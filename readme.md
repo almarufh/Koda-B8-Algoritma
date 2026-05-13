@@ -28,7 +28,7 @@ C@{ shape: lean-r, label: harga }
 D@{ shape: lean-r, label: kupon }
 E@{ shape: diamond, label: 'kupon == "BELIUM"'}
 F@{ shape: rect, label: "kembalian = uang_tunai - harga" }
-G@{ shape: diamond, label: "uang_tunai >= 20000" }
+G@{ shape: diamond, label: "uang_tunai >= 200000" }
 H@{ shape: diamond, label: "kembalian < 0" }
 I@{ shape: rect, label: "kembalian = uang_tunai - ((harga*0.07) + harga)" }
 J@{ shape: rect, label: "kembalian = uang_tunai - ((harga*0.03) + harga)" }
@@ -66,7 +66,7 @@ INPUT kupon
 IF kupon == "BELIUM" THAN
     kembalian <- uang_tunai - harga
 ELSE
-    IF uang_tunai >= 20000 THAN
+    IF uang_tunai >= 200000 THAN
         kembalian <- uang_tunai - ((harga*0.07) + harga)
     ELSE 
         kembalian <- uang_tunai - ((harga*0.03) + harga)
